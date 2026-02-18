@@ -1,0 +1,35 @@
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: antiquewhite;
+    /* background-image: url("2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.demo{
+    background-color: aqua;
+    /* border: 1px solid black; */
+    border-style: dashed dotted double solid;
+}
+
+#try{
+    color: red;
+    padding: 5px 10px 15px 15px;
+    height: 200px;
+    width: 500px;
+}
+
+h1{
+    background-color: aquamarine;
+}
+
+ul li{
+    color: red;
+    display: inline;
+    display: block;
+    display: inline-block;
+}
