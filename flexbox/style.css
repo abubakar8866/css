@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+    background: #8ade69;
+}
+
+/* Logo */
+.logo {
+    flex: 0 0 auto;      /* no grow, no shrink */
+}
+
+/* Navigation */
+.nav {
+    flex: 1 1 300px;     /* grow, shrink, basis */
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Profile */
+.profile {
+    flex: 0 0 auto;      /* should not shrink */
+    align-self: center;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 0 0 200px;   /* fixed 200px */
+    background: #e37272;
+    padding: 20px;
+}
+
+/* Main Content */
+.content {
+    flex: 1 1 auto;    /* takes remaining space */
+    background: #77e477;
+    padding: 20px;
+}
+
+/* Ads */
+.ads {
+    flex: 0 0 150px;   /* fixed 150px */
+    background: #9696e7;
+    padding: 20px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    /* Header nav moves below logo */
+    .nav {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .profile {
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    /* Main layout stack */
+    main {
+        flex-direction: column;
+    }
+
+    .content {
+        order: 1;
+    }
+
+    .ads {
+        order: 2;
+    }
+
+    .sidebar {
+        order: 3;  /* sidebar appears last */
+    }
+}
